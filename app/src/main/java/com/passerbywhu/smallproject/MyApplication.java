@@ -22,4 +22,8 @@ public class MyApplication extends Application {
     public static MyApplication getInstance() {
         return instance;
     }
+
+    public ApplicationComponent getComponent() {
+        return mComponent;
+    }
 }

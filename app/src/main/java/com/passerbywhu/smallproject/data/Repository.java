@@ -3,16 +3,17 @@ package com.passerbywhu.smallproject.data;
 
 import com.passerbywhu.smallproject.data.source.qulifier.Local;
 import com.passerbywhu.smallproject.data.source.qulifier.Remote;
+import com.passerbywhu.smallproject.main.entity.GiftEntity;
+import com.passerbywhu.smallproject.network.Response;
+
+import java.util.List;
 
 import javax.inject.Inject;
 
 import io.reactivex.Observable;
 import io.reactivex.ObservableEmitter;
 import io.reactivex.ObservableOnSubscribe;
-import io.reactivex.ObservableSource;
 import io.reactivex.functions.Function;
-import okhttp3.MultipartBody;
-import retrofit2.http.Part;
 
 /**
  * Created by passe on 2017/5/25.
@@ -20,7 +21,6 @@ import retrofit2.http.Part;
 public class Repository implements API {
     private final API mRemoteAPI;
     private final API mLocalAPI;
-    private static int turn = 0;
     private static final ThreadLocal<Boolean> fromCache = new ThreadLocal<>();
 
     public static Observable readFromLocal() {
@@ -65,13 +65,13 @@ public class Repository implements API {
         });
     }
 
-//    @Override
-//    public Observable<Response<CommonEntity>> getConfigCommon() {
-//        return getAPI().flatMap(new Function<API, ObservableSource<Response<CommonEntity>>>() {
-//            @Override
-//            public ObservableSource<Response<CommonEntity>> apply(API api) throws Exception {
-//                return api.getConfigCommon();
-//            }
-//        });
-//    }
+    @Override
+    public Observable<Response<List<GiftEntity>>> getGifts(final int page, final int pageSize) {
+        return getAPI().flatMap(new Function<API, Observable<Response<List<GiftEntity>>>>() {
+            @Override
+            public Observable<Response<List<GiftEntity>>> apply(API api) throws Exception {
+                return api.getGifts(page, pageSize);
+            }
+        });
+    }
 }

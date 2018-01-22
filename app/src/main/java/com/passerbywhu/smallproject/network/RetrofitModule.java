@@ -10,12 +10,9 @@ import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-/**
- * Created by passe on 2017/5/26.
- */
 @Module
 public class RetrofitModule {
-    public static final String BASE_URL = "";
+    public static final String BASE_URL = "http://gank.io";
 
     @ApplicationScope
     @Provides

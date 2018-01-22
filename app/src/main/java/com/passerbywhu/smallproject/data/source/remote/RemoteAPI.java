@@ -2,12 +2,15 @@ package com.passerbywhu.smallproject.data.source.remote;
 
 
 import com.passerbywhu.smallproject.data.API;
+import com.passerbywhu.smallproject.main.entity.GiftEntity;
 import com.passerbywhu.smallproject.network.APIService;
+import com.passerbywhu.smallproject.network.Response;
 
+import java.util.List;
 import javax.inject.Inject;
 
-import okhttp3.MultipartBody;
-import retrofit2.http.Part;
+import io.reactivex.Observable;
+
 
 /**
  * Created by passe on 2017/5/25.
@@ -22,5 +25,10 @@ public class RemoteAPI implements API {
 
     @Inject
     public RemoteAPI() {
+    }
+
+    @Override
+    public Observable<Response<List<GiftEntity>>> getGifts(int page, int pageSize) {
+        return mSmallService.getGifts(CACHE_CONTROL_NETWORK, page, pageSize);
     }
 }
