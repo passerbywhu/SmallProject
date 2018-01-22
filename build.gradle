@@ -25,3 +25,21 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+ext {
+    compileSdkVersion = 26
+    buildToolsVersion = "26.0.2"
+    appcompatVersion = "26.0.2"
+    minSdkVersion = 19
+    targetSdkVersion = 26
+    daggerVersion = "2.11"
+    okhttpInterceptorVersion = "3.0.1"
+    okhttpVersion = "3.8.0"
+    retrofitVersion = "2.2.0"
+    okhttpVersion = "3.0.1"
+    rxbindingVersion = "2.0.0"
+    rxlifecycleVersion = "2.0.1"
+    multidexVersion = "1.0.1"
+    picassoVersion = "2.5.2"
+    flexboxVersion = "0.3.0"
+}
