@@ -32,7 +32,7 @@ public class OKHttpModule {
             StatFs statFs = new StatFs(dir.getAbsolutePath());
             long available = ((long) statFs.getBlockCount()) * statFs.getBlockSize();
             // Target 2% of the total space.
-            size = available / 50;
+            size = available / 25;
         } catch (IllegalArgumentException ignored) {
         }
 

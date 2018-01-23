@@ -1,17 +1,15 @@
 package com.passerbywhu.smallproject.image;
 
 import android.graphics.drawable.Drawable;
-import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
-import android.view.ViewTreeObserver;
 import android.widget.ImageView;
 
 import com.passerbywhu.smallproject.MyApplication;
 import com.passerbywhu.smallproject.dagger.ApplicationScope;
 import com.squareup.picasso.Callback;
-import com.squareup.picasso.NetworkPolicy;
 import com.squareup.picasso.Picasso;
 import com.squareup.picasso.RequestCreator;
+import com.squareup.picasso.Target;
 import com.squareup.picasso.Transformation;
 
 import javax.inject.Inject;
@@ -65,6 +63,14 @@ public class ImageLoader {
         } else {
             requestCreator.into(imageView);
         }
+    }
+
+    public void loadImage(String url, Target target, int drawable) {
+        RequestCreator requestCreator = picasso.load(url);
+        requestCreator.error(drawable);
+        requestCreator.placeholder(drawable);
+        requestCreator.fit();
+        requestCreator.into(target);
     }
 
     public void loadImage(String url, ImageView imageView) {

@@ -2,11 +2,7 @@ package com.passerbywhu.smallproject.main;
 
 import com.trello.rxlifecycle2.LifecycleTransformer;
 
-/**
- * Created by passe on 2017/8/22.
- */
-
-public class MainActivityContract {
+public class MainFragmentContract {
     interface View<T> {
         void refreshComplete(T t);
         void refreshError(Throwable throwable);
