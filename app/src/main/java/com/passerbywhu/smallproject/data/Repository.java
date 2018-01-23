@@ -15,9 +15,6 @@ import io.reactivex.ObservableEmitter;
 import io.reactivex.ObservableOnSubscribe;
 import io.reactivex.functions.Function;
 
-/**
- * Created by passe on 2017/5/25.
- */
 public class Repository implements API {
     private final API mRemoteAPI;
     private final API mLocalAPI;

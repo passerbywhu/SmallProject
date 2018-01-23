@@ -14,10 +14,6 @@ import com.trello.rxlifecycle2.android.FragmentEvent;
 
 import io.reactivex.functions.Consumer;
 
-/**
- * Created by passe on 2017/8/22.
- */
-
 public abstract class BaseRefreshFragment<V> extends BaseFragment implements RefreshInterface<V> {
     protected SwipeRefreshLayout mSwipeRefreshLayout;
     protected TriggerObservable mTriggerObservable;

@@ -10,9 +10,6 @@ import dagger.Module;
 import dagger.Provides;
 import okhttp3.OkHttpClient;
 
-/**
- * Created by passe on 2017/9/7.
- */
 @Module
 public class ImageLoaderModule {
     @ApplicationScope

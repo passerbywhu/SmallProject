@@ -29,10 +29,6 @@ import io.reactivex.functions.Consumer;
 import io.reactivex.functions.Function;
 import io.reactivex.schedulers.Schedulers;
 
-/**
- * Created by passe on 2017/8/22.
- */
-
 public abstract class BaseRecyclerViewFragment<T, V> extends BaseRefreshFragment<T> {
     protected RecyclerView mPageRecyclerView;
     protected HeaderFooterAdapter<V, ?> mAdapter;

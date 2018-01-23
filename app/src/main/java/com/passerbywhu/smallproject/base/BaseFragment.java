@@ -10,10 +10,6 @@ import android.view.ViewParent;
 import com.passerbywhu.smallproject.utils.MainThreadPoster;
 import com.trello.rxlifecycle2.components.support.RxFragment;
 
-/**
- * Created by passe on 2017/5/23.
- */
-
 public class BaseFragment extends RxFragment {
     protected boolean mIsVisible = false;
     protected boolean mIsViewCreated = false;

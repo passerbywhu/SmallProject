@@ -7,9 +7,6 @@ import android.support.v7.widget.helper.ItemTouchHelper;
 import android.view.MotionEvent;
 import android.view.View;
 
-/**
- * Created by hzwuwenchao on 2015/11/25.
- */
 public abstract class DragSortAdapter<T, VH extends RecyclerView.ViewHolder> extends HeaderFooterAdapter<T, VH> {
     private boolean allowMoveUp = false, allowMoveDown = false;
     private boolean allowSwipeStart = false, allowSwipeEnd = false;

@@ -14,9 +14,6 @@ import com.squareup.picasso.Transformation;
 
 import javax.inject.Inject;
 
-/**
- * Created by hzwuwenchao on 16/1/14.
- */
 @ApplicationScope
 public class ImageLoader {
     private static volatile ImageLoader instance;

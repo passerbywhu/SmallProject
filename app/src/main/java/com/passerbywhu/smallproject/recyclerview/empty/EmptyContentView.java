@@ -7,10 +7,6 @@ import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.widget.FrameLayout;
 
-/**
- * Created by passe on 2017/8/2.
- */
-
 public abstract class EmptyContentView extends FrameLayout implements EmptyContent {
     public EmptyContentView(@NonNull Context context) {
         super(context);

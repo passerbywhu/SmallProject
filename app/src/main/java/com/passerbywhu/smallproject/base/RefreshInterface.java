@@ -1,9 +1,5 @@
 package com.passerbywhu.smallproject.base;
 
-/**
- * Created by passe on 2017/8/22.
- */
-
 public interface RefreshInterface<T> {
     void refresh();
     void refreshFromCache();

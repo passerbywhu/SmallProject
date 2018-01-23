@@ -9,9 +9,6 @@ import android.util.AttributeSet;
 import android.util.DisplayMetrics;
 import android.view.View;
 
-/**
- * Created by passe on 2016/7/19.
- */
 public class SmoothScrollLinearLayoutManager extends LinearLayoutManager {
     private int offset = 0;
 

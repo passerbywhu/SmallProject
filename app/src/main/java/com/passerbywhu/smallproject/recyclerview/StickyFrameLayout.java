@@ -10,10 +10,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 
-/**
- * Created by passe on 2017/6/1.
- */
-
 public class StickyFrameLayout extends FrameLayout {
     private RecyclerView mRecyclerView;
     private View mSectionView;

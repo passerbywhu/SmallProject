@@ -8,10 +8,6 @@ import com.passerbywhu.smallproject.dagger.ActivityModule;
 import com.passerbywhu.smallproject.utils.MainThreadPoster;
 import com.trello.rxlifecycle2.components.support.RxAppCompatActivity;
 
-/**
- * Created by passe on 2017/5/23.
- */
-
 public class BaseActivity extends RxAppCompatActivity {
     private String HANDLER_TOKEN = getClass().getName();
 

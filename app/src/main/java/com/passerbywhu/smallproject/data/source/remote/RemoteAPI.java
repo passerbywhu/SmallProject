@@ -11,10 +11,6 @@ import javax.inject.Inject;
 
 import io.reactivex.Observable;
 
-
-/**
- * Created by passe on 2017/5/25.
- */
 public class RemoteAPI implements API {
     @Inject
     APIService.SmallService mSmallService;

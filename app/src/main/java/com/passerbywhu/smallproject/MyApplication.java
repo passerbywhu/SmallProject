@@ -2,10 +2,6 @@ package com.passerbywhu.smallproject;
 
 import android.app.Application;
 
-/**
- * Created by hzwuwenchao on 2018/1/22.
- */
-
 public class MyApplication extends Application {
     private static volatile MyApplication instance;
     private ApplicationComponent mComponent;

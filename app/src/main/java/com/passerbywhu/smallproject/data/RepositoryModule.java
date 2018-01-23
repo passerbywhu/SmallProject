@@ -9,9 +9,6 @@ import com.passerbywhu.smallproject.data.source.remote.RemoteAPI;
 import dagger.Module;
 import dagger.Provides;
 
-/**
- * Created by passe on 2017/5/25.
- */
 @Module
 public class RepositoryModule {
     @ApplicationScope

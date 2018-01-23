@@ -5,10 +5,6 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonSyntaxException;
 import com.google.gson.reflect.TypeToken;
 
-/**
- * Created by passe on 2016/12/19.
- */
-
 public class GsonUtils {
     private static final Gson gson = new Gson();
 

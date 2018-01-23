@@ -18,9 +18,6 @@ import okhttp3.Cookie;
 import okhttp3.CookieJar;
 import okhttp3.HttpUrl;
 
-/**
- * Created by hzwuwenchao on 2016/5/13.
- */
 public class MyCookieJar implements CookieJar {
     private final static String OKHTTP3_PREFERENCE_NAME = "cookie_jar";
     private static volatile MyCookieJar instance;

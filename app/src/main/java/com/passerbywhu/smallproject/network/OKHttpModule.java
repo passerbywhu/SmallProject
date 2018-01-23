@@ -15,10 +15,6 @@ import okhttp3.Dispatcher;
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
 
-/**
- * Created by passe on 2017/9/7.
- */
-
 @Module
 public class OKHttpModule {
     private static final int CACHE_SIZE = 100 * 1024 * 1024;

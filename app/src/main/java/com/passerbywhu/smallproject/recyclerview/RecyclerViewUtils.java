@@ -8,10 +8,6 @@ import android.view.View;
 
 import com.google.android.flexbox.FlexboxLayoutManager;
 
-/**
- * Created by passe on 2017/5/26.
- */
-
 public class RecyclerViewUtils {
     /**
      * 判断recyclerView最后一个item是否完全可见，不包括footerView

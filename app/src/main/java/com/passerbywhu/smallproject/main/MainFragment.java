@@ -1,10 +1,7 @@
 package com.passerbywhu.smallproject.main;
 
 import android.content.Context;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.graphics.Point;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
@@ -21,8 +18,6 @@ import com.passerbywhu.smallproject.image.ImageLoader;
 import com.passerbywhu.smallproject.main.entity.GiftEntity;
 import com.passerbywhu.smallproject.network.Response;
 import com.passerbywhu.smallproject.recyclerview.HeaderFooterAdapter;
-import com.squareup.picasso.Picasso;
-import com.squareup.picasso.Target;
 
 import java.util.HashMap;
 import java.util.List;

@@ -5,10 +5,6 @@ import io.reactivex.Observer;
 import io.reactivex.android.MainThreadDisposable;
 import io.reactivex.disposables.Disposable;
 
-/**
- * Created by passe on 2017/8/1.
- */
-
 public class TriggerObservable<T> extends Observable<T> {
     private Observer<? super T> observer;
     private Disposable disposable;

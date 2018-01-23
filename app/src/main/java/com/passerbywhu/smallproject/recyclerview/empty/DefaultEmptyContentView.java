@@ -11,10 +11,6 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 
-/**
- * Created by passe on 2017/8/2.
- */
-
 public class DefaultEmptyContentView extends EmptyContentView {
     private TextView mHint;
 

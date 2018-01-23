@@ -20,12 +20,10 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * Created by hzwuwenchao on 2015/11/23.
  * 支持Footer和Header的RecyclerView Adapter
  * 暂时仅支持一个Header和一个Footer
  * 这个Adapter为其子Adapter封装了Header和Footer的细节。子Adapter只需要按照普通Adapter的操作即可。
  *
- * updated by hzwuwenchao on 2016/5/16
  * 支持多Header和多Footer
  */
 public abstract class HeaderFooterAdapter<T, VH extends RecyclerView.ViewHolder> extends RecyclerView.Adapter<RecyclerView.ViewHolder> {

@@ -1,9 +1,5 @@
 package com.passerbywhu.smallproject.recyclerview.footer;
 
-/**
- * Created by passe on 2017/8/1.
- */
-
 public interface FooterLoading {
     //准备加载
     void onPreLoading();

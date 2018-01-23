@@ -10,10 +10,6 @@ import android.widget.TextView;
 
 import com.passerbywhu.smallproject.R;
 
-/**
- * Created by passe on 2017/8/2.
- */
-
 public class DefaultLoadingView extends FooterLoadingView {
     private ContentLoadingProgressBar mProgressBar;
     private TextView mLoadText;

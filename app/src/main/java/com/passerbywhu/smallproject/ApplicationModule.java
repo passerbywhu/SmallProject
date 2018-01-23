@@ -7,9 +7,6 @@ import com.passerbywhu.smallproject.dagger.ApplicationScope;
 import dagger.Module;
 import dagger.Provides;
 
-/**
- * Created by passe on 2017/5/23.
- */
 @Module
 public class ApplicationModule {
     private final Context mContext;

@@ -10,9 +10,6 @@ import com.passerbywhu.smallproject.network.RetrofitModule;
 
 import dagger.Component;
 
-/**
- * Created by passe on 2017/5/23.
- */
 @ApplicationScope
 @Component(modules = {ApplicationModule.class, RetrofitModule.class,
         OKHttpModule.class, RepositoryModule.class, ImageLoaderModule.class})

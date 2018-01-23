@@ -13,9 +13,6 @@ import okhttp3.Call;
 import okhttp3.OkHttpClient;
 import okhttp3.ResponseBody;
 
-/**
- * Created by passe on 2016/5/16.
- */
 public class OKHttp3Downloader implements Downloader {
     private final Call.Factory client;
     private Cache cache;
