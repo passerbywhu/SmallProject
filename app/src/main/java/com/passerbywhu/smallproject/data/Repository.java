@@ -13,6 +13,7 @@ import javax.inject.Inject;
 import io.reactivex.Observable;
 import io.reactivex.ObservableEmitter;
 import io.reactivex.ObservableOnSubscribe;
+import io.reactivex.ObservableSource;
 import io.reactivex.functions.Function;
 
 public class Repository implements API {
@@ -20,7 +21,7 @@ public class Repository implements API {
     private final API mLocalAPI;
     private static final ThreadLocal<Boolean> fromCache = new ThreadLocal<>();
 
-    public static Observable readFromLocal() {
+    private static Observable readFromLocal() {
         return Observable.create(new ObservableOnSubscribe<String>() {
             @Override
             public void subscribe(ObservableEmitter<String> e) throws Exception {
@@ -31,7 +32,7 @@ public class Repository implements API {
         });
     }
 
-    public static Observable readFromRemote() {
+    private static Observable readFromRemote() {
         return Observable.create(new ObservableOnSubscribe<String>() {
             @Override
             public void subscribe(ObservableEmitter<String> e) throws Exception {
@@ -68,6 +69,19 @@ public class Repository implements API {
             @Override
             public Observable<Response<List<GiftEntity>>> apply(API api) throws Exception {
                 return api.getGifts(page, pageSize);
+            }
+        });
+    }
+
+    public static <T> Observable<T> wrap(boolean fromCache, final Observable<T> observable) {
+        Observable<String> fromCacheObservable = Repository.readFromRemote();
+        if (fromCache) {
+            fromCacheObservable = Repository.readFromLocal();
+        }
+        return fromCacheObservable.flatMap(new Function<String, ObservableSource<T>>() {
+            @Override
+            public ObservableSource<T> apply(String s) throws Exception {
+                return observable;
             }
         });
     }

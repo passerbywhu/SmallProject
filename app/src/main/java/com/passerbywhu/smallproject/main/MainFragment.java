@@ -46,6 +46,11 @@ public class MainFragment extends BaseRecyclerViewFragment<Response<List<GiftEnt
     }
 
     @Override
+    protected boolean readCache() {
+        return true;
+    }
+
+    @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         DaggerMainFragmentComponent.builder().applicationComponent(MyApplication.getInstance().getComponent())

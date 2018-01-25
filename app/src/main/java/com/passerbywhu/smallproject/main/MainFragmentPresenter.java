@@ -26,11 +26,6 @@ public class MainFragmentPresenter implements MainFragmentContract.Presenter {
     }
 
     public Observable<Response<List<GiftEntity>>> loadPage(int page, int pageSize, boolean fromCache) {
-        if (fromCache) {
-            Repository.readFromLocal();
-        } else {
-            Repository.readFromRemote();
-        }
-        return mRepository.getGifts(page, pageSize);
+        return Repository.wrap(fromCache,mRepository.getGifts(page, pageSize));
     }
 }
